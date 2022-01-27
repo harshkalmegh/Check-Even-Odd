@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     * Algorithm
+     * 1. Start
+     * 2. if input is not number(return "enter a proper value")
+     * 3. if input is number in string convert into number by parseInt method
+     * 4. if input is divisible by 2 (return Input is Even)
+     * 4.1. if not (return Input is Odd)
+     * 5.
+     */
+    // Version 1
+    // function checkEvenOddV1(val) {
+    //   if (val === undefined || val === null) {
+    //     return "Enter a Proper Value";
+    //   }
+    //   const value = parseInt(val);
+    //   if (isNaN(value)) {
+    //     return "Please Enter Number";
+    //   }
+    //   if (val % 2 === 0) {
+    //     return "Input Value is Even";
+    //   }
+    //   return "Input Value is Odd";
+    // }
+    // console.log(checkEvenOddV1("6"));
+
+    // Version 2
+    // function checkEvenOddV2(val) {
+    //   if (val === undefined || val === null) {
+    //     return console.log("Enter a Proper Value");
+    //   }
+    //   const value = parseInt(val);
+    //   if (isNaN(value)) {
+    //     return console.log("Please Enter Number");
+    //   }
+    //   for (let i = 0; i <= val; i++) {
+    //     if (i % 2 === 0) {
+    //       console.log(`${i} in Even`);
+    //     }
+    //     if (i % 2 !== 0) {
+    //       console.log(`${i} in Odd`);
+    //     }
+    //   }
+    //   return;
+    // }
+    // checkEvenOddV2("5");
+
+    // Version 3
+    // function checkEvenOddV3(val) {
+    //   if (val === undefined || val === null) {
+    //     return "Enter a Proper Value";
+    //   }
+    //   const value = parseInt(val);
+    //   if (isNaN(value)) {
+    //     return "Please Enter Number";
+    //   }
+    //   let arr = [];
+    //   for (let i = 0; i <= val; i++) {
+    //     if (i % 2 === 0) {
+    //       arr.push({ [i]: "Even" });
+    //     }
+    //     if (i % 2 !== 0) {
+    //       arr.push({ [i]: "Odd" });
+    //     }
+    //   }
+    //   return arr;
+    // }
+    // console.log(checkEvenOddV3("10"));
+
+    // Version 4
+    function checkEvenOddV3(val) {
+      if (val === undefined || val === null) {
+        return "Enter a Proper Value";
+      }
+      const value = parseInt(val);
+      if (isNaN(value)) {
+        return "Please Enter Number";
+      }
+      let obj = {};
+      for (let i = 0; i <= val; i++) {
+        if (i % 2 === 0) {
+          obj[i] = "Even";
+        }
+        if (i % 2 !== 0) {
+          obj[i] = "Odd";
+        }
+      }
+      return obj;
+    }
+    console.log(checkEvenOddV3("10"));
+  </script>
+</html>
